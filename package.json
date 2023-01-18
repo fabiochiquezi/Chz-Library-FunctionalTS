@@ -1,0 +1,23 @@
+{
+  "name": "@fabiochiquezi/functional-ts",
+  "version": "1.0.0",
+  "description": "My library of functional typescript",
+  "repository": "https://github.com/fabiochiquezi/Chz-Component-PopSave",
+  "keywords": ["functional-ts", "functional-js", "functional-programing" ],
+  "main": "dist/index.js",
+  "author": "Fábio Chiquezi <fabiochiquezi@gmail.com",
+  "license": "MIT",
+  "scripts": {
+    "build": "rm -rf dist && tsc",
+    "test": "jest --runInBand",
+    "test:watch": "jest --runInBand --watch"
+  },
+  "devDependencies": {
+    "typescript": "*",
+    "@swc/jest": "^0.2.22",
+    "@testing-library/jest-dom": "^5.16.5",
+    "jest": "^29.0.2",
+    "jest-css-modules": "^2.1.0",
+    "jest-environment-jsdom": "^29.0.2"
+  }
+}
