@@ -3,38 +3,51 @@
     <img src="https://www.chiquezi.com/_next/image?url=%2F_next%2Fstatic%2Fimage%2Fpublic%2Flogo%2Flogo.c442afade084ba1adfa95e1aecfc83d0.svg&w=384&q=75" width="125">
 </p>
 
-# 🤙 PopSave
+# 🤙 Functional Programming Library for Typescript
 
-Simple VanillaUI Component to fire a message to the user that has a process being save.
+Some simple functions to help typescript to work with FP paradigm.
 
 ## 🚀 Getting Started
 
+For now I just built up pipe functions:
+
 ```
-import { usePopSave } from '@fabiochiquezi/pop-save'
-const popSave = usePopSave()
+<!-- Calls functions in a row throwing the return value to the next function -->
 
-<!-- Display -->
-popSave.open(
-  message?: string,
-  delay?: number,
-  spin?: { color: string, width: number, height: number }
-)
+const sum1 = (num) = num + 1
+const sum2 = (num) = num + 2
+const sum3 = (num) = num + 3
+examples: pipe(0, sum1, sum2, sum3) // 6
 
-<!-- Remove-->
-popSave.close()
+const sum1 = async (num) = await num + 1
+const sum2 = async (num) = await num + 2
+const sum3 = async (num) = await num + 3
+examples: asyncPipe(0, sum1, sum2, sum3) // 6
 
-<!-- Customize -->
-const options = {
-  id?: string,
-  className?: string,
-  animationRemove?: string,
-  animationAdd?: string,
-  animationDuration?: number,
-  backgroundColor?: string,
-  color?: string
-}
+<!-- Calls sideEffect functions in a row -->
 
-const popSave = usePopSave(options)
+const cons1 = () => console.log(1)
+const cons2 = () => console.log(2)
+const cons3 = () => console.log(3)
+pipeSideEffect(cons1, cons2, cons3) // call all functions
+
+const cons1 = async () => await console.log(1)
+const cons2 = async () => await console.log(2)
+const cons3 = async () => await console.log(3)
+asyncPipeSideEffect(cons1, cons2, cons3) // call all functions
+
+<!-- Calls functions in a row passing the first argument to all of them -->
+
+const cons1 = (num) => console.log(num)
+const cons2 = (num) => console.log(num)
+const cons3 = (num) => console.log(num)
+pipeArg(0, cons1, cons2, cons3) // console log 1, 2, 3
+
+const cons1 = async (num) => await console.log(num)
+const cons2 = async (num) => await console.log(num)
+const cons3 = async (num) => await console.log(num)
+pipeArg(0, cons1, cons2, cons3) // console log 1, 2, 3
+
 ```
 
 ### 📡 Installing
@@ -42,19 +55,7 @@ const popSave = usePopSave(options)
 Component:
 
 ```
-yarn add @fabiochiquezi/pop-save
-
-import { usePopSave } from '@fabiochiquezi/pop-save'
-@import "@fabiochiquezi/pop-save/styles.css"
-```
-
-Project:
-
-```
-git clone https://github.com/fabiochiquezi/Chz-Component-PopSave.git
-cd Chz-Component-PopSave
-yarn install
-yarn dev
+yarn add @fabiochiquezi/functional-ts
 ```
 
 ## ✋ Author
