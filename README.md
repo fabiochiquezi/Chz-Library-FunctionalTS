@@ -5,7 +5,7 @@ See more in the documentation at [chiquezi.com/libraries/functional-ts](https://
 
 Note: So far I have only build the pipe functions. I am building as far I need in my projects
 
-## 🚀 Getting Started
+### 🚀 Getting Started
 
 For now I just built up pipe functions:
 
@@ -30,6 +30,6 @@ const sum3 = async (num) = await num + 3
 asyncPipe(0, sum1, sum2, sum3) // 6
 ```
 
-## ✋ Author
+### ✋ Author
 
 - **Fábio Chiquezi** - [GitHub](https://github.com/fabiochiquezi) / [LinkedIn](https://www.linkedin.com/in/fabiochiquezi/)
