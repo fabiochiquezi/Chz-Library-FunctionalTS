@@ -1,9 +1,14 @@
 {
   "name": "@fabiochiquezi/functional-ts",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "My library of functional typescript",
-  "repository": "https://github.com/fabiochiquezi/Chz-Component-PopSave",
-  "keywords": ["functional-ts", "functional-js", "functional-programing" ],
+  "repository": "https://github.com/fabiochiquezi/Chz-Library-FunctionalTS",
+  "homepage": "https://www.chiquezi.com/libraries/functional-ts",
+  "keywords": [
+    "functional-ts",
+    "functional-js",
+    "functional-programing"
+  ],
   "main": "dist/index.js",
   "author": "Fábio Chiquezi <fabiochiquezi@gmail.com",
   "license": "MIT",
