@@ -33,3 +33,4 @@ asyncPipe(0, sum1, sum2, sum3) // 6
 ### ✋ Author
 
 - **Fábio Chiquezi** - [GitHub](https://github.com/fabiochiquezi) / [LinkedIn](https://www.linkedin.com/in/fabiochiquezi/)
+
